@@ -33,7 +33,7 @@ const Nav = () => {
 					<Link
 						href={link.path}
             key={link.name}
-						className={`${pathname === link.path ? 'text-cyber' : 'text-neutral-50'}`}
+						className={`${pathname === link.path ? 'text-cyber' : 'text-neutral-50'} transition-text duration-200 hover:text-cyber`}
 					>
             {link.name}
 					</Link>
