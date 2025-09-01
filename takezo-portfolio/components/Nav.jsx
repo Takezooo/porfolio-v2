@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "@/context/ThemeContext";
+import { useEffect, useState } from "react";
 
 const links = [
 	{
@@ -12,10 +14,6 @@ const links = [
 		name: "Projects",
 		path: "/projects",
 	},
-	// {
-	// 	name: "Certifications",
-	// 	path: "/certificates",
-	// },
 	{
 		name: "Services",
 		path: "/services",
@@ -23,8 +21,12 @@ const links = [
 ];
 
 const Nav = () => {
-
+	const { theme } = useTheme();
 	const pathname = usePathname();
+	const [fontColor, setFontColor] = useState("text-cyber");
+	useEffect(() => {
+		setFontColor(theme === "green" ? "text-cyber" : "text-dev");
+	}, [theme]);
 
 	return (
 		<nav className={`flex gap-10 items-center font-semibold`}>
@@ -32,10 +34,14 @@ const Nav = () => {
 				return (
 					<Link
 						href={link.path}
-            key={link.name}
-						className={`${pathname === link.path ? 'text-cyber' : 'text-neutral-50'} transition-text duration-200 hover:text-cyber`}
+						key={link.name}
+						className={`${
+							pathname === link.path ? fontColor : "text-neutral-50"
+						} transition-text duration-200 ${
+							theme === "green" ? `hover:text-cyber` : `hover:text-dev`
+						}`}
 					>
-            {link.name}
+						{link.name}
 					</Link>
 				);
 			})}

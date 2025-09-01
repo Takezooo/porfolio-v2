@@ -14,10 +14,10 @@
   --breakpoint-xs: 450px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 960px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-2xl: 1400px;
-  --color-my-bgcolor: #0E0E0E;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --color-my-bgcolor: #0A0A0A;
   --color-cyber: #37B576;
   --color-dev: #37A8B5;
   --color-background: var(--background);
