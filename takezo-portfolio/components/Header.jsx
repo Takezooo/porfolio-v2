@@ -19,7 +19,7 @@ const Header = () => {
 	}, [theme]);
 
 	return (
-		<header className="mb-10">
+		<header className="mb-10 h-[100px]">
 			{/* flex items-center justify-between */}
 			<div className="items-center grid md:grid-cols-[1fr_auto] lg:grid-cols-[1fr_auto_1fr]">
 				{/* Logo */}

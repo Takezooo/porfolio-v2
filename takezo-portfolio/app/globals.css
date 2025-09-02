@@ -9,6 +9,10 @@
   --font-inter: "Inter", sans-serif;
   --text-nav--font-weight: 600;
   --text-nav: 1.125rem;
+  --text-h1: 3rem;
+  --text-h2: 2.25rem;
+  --text-h3: 1.75rem;
+  --text-p: 1rem;
   --breakpoint-*: initial;
   --breakpoint-2xs: 320px;
   --breakpoint-xs: 450px;
@@ -61,6 +65,7 @@
 
 :root {
   --radius: 0.625rem;
+  --background-cyberbg: url('/assets/cyber-bg.svg');
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
