@@ -1,9 +1,15 @@
 "use client";
 
+// react
+import { useEffect, useState } from "react";
+
+// next
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+// context 
 import { useTheme } from "@/context/ThemeContext";
-import { useEffect, useState } from "react";
+
 
 const links = [
 	{

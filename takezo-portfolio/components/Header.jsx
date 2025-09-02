@@ -4,12 +4,15 @@ import { useState, useEffect } from "react";
 
 // components
 import Nav from "./Nav";
-import { useTheme } from "../context/ThemeContext";
+import MobileNav from "./MobileNav";
 
 // shadcn components
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
+
+// context
+import { useTheme } from "../context/ThemeContext";
 
 const Header = () => {
 	const { theme, toggleTheme } = useTheme();
@@ -57,6 +60,10 @@ const Header = () => {
 					>
 						{theme === "green" ? `CYBER` : `DEV`}
 					</Button>
+				</div>
+				{/* Mobile Nav */}
+				<div className= "lg:hidden">
+					<MobileNav />
 				</div>
 			</div>
 		</header>
