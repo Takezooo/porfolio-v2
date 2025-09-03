@@ -35,13 +35,13 @@ const Nav = () => {
 	}, [theme]);
 
 	return (
-		<nav className={`flex gap-10 items-center font-semibold`}>
+		<nav className={`flex max-lg:flex-col gap-10 items-center font-semibold`}>
 			{links.map((link, index) => {
 				return (
 					<Link
 						href={link.path}
 						key={link.name}
-						className={`${
+						className={`w-[100%] pb-2 border-b border-gray-700 lg:pb-0 lg:w-[auto] lg:border-none ${
 							pathname === link.path ? fontColor : "text-neutral-50"
 						} transition-text duration-200 ${
 							theme === "green" ? `hover:text-cyber` : `hover:text-dev`

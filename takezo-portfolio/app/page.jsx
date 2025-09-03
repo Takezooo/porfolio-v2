@@ -93,18 +93,17 @@ export default function Home() {
 			className={`flex flex-col justify-center items-center container mx-auto px-4`}
 		>
 			<Image
-				className={`absolute -z-1 object-top !top-[150px] !overflow-x-hidden ${
-					theme !== "green" && `!left-[0]`
+				className={`z-1 object-top !top-[150px] !overflow-x-hidden
+        ${theme !== "green" && "!left-[0]"}
 				}`}
 				src={
 					theme === "green" ? `./assets/cyber-bg.svg` : `./assets/dev-bg.svg`
 				}
-				layout="fill"
-				objectFit={`contain`}
-				quality={100}
+				fill
+				objectFit="contain"
 				alt="Cyber Page Background"
 			/>
-			<div className="w-[100%] md:w-[80%] sm:w-[90%] mb-4 md:mb-10">
+			<div className="w-[100%] md:w-[80%] sm:w-[90%] mb-4 md:mb-10 mt-10 ">
 				<h2 className="text-lg md:text-h2 sm:text-h3 font-bold">Hello I'm</h2>
 				<h1
 					className={`text-h3 md:text-h1 sm:text-h2 font-bold ${
@@ -182,7 +181,7 @@ export default function Home() {
 				</h3>
 				<div className="md:pl-4">
 					{achievements.map((item, index) => (
-						<p className="mb-2 text-xs sm:text-base md:text-p">
+						<p className="mb-2 text-xs sm:text-base md:text-p" key={index}>
 							<span
 								className={`${theme === "green" ? `text-cyber` : `text-dev`}`}
 							>
@@ -208,9 +207,9 @@ export default function Home() {
 							EXPERIENCE
 						</h3>
 						{theme === "green" ? (
-							cyberExp.map((item) => {
+							cyberExp.map((item, index) => {
 								return (
-									<p className="text-xs sm:text-base md:text-p">
+									<p className="text-xs sm:text-base md:text-p" key={index}>
 										- {item}
 										<br />-
 									</p>
