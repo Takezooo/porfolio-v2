@@ -345,7 +345,7 @@ export default function Home() {
 					>
 						SOCIALS
 					</h3>
-					<div className="text-xs sm:text-base md:text-p font-semibold justify-self-start text-right flex flex-col gap-2">
+					<div className="text-xs sm:text-base md:text-p font-semibold justify-self-start text-left flex flex-col gap-2">
 						<Link
 							href="https://www.linkedin.com/in/dave-martin-jornales-850297198/"
 							className={`${
@@ -355,9 +355,9 @@ export default function Home() {
 							<span
 								className={`${theme === "green" ? `text-cyber` : `text-dev`}`}
 							>
-								&#9632;&nbsp;
+								&#9632;&nbsp;&nbsp;&nbsp;
 							</span>
-							=================== LinkedIn ===================
+							LinkedIn ===================
 						</Link>
 						<Link
 							href="https://github.com/Takezooo"
@@ -368,9 +368,9 @@ export default function Home() {
 							<span
 								className={`${theme === "green" ? `text-cyber` : `text-dev`}`}
 							>
-								&#9632;&nbsp;
+								&#9632;&nbsp;&nbsp;&nbsp;
 							</span>
-							=================== GitHub ====================
+							GitHub ====================
 						</Link>
 						<Link
 							href="https://www.youtube.com/@takezosrandomness"
@@ -381,9 +381,9 @@ export default function Home() {
 							<span
 								className={`${theme === "green" ? `text-cyber` : `text-dev`}`}
 							>
-								&#9632;&nbsp;
+								&#9632;&nbsp;&nbsp;&nbsp;
 							</span>
-							=================== YouTube ===================
+							YouTube ===================
 						</Link>
 						<Link
 							href="https://www.instagram.com/d_takezooo/"
@@ -395,9 +395,9 @@ export default function Home() {
 							<span
 								className={`${theme === "green" ? `text-cyber` : `text-dev`}`}
 							>
-								&#9632;&nbsp;
+								&#9632;&nbsp;&nbsp;&nbsp;
 							</span>
-							================== Instagram ===================
+							Instagram ===================
 						</Link>
 					</div>
 				</div>
