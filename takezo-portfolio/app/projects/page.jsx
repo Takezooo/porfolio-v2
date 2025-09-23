@@ -30,6 +30,79 @@ const devProjects = [
 		languages: "C, Raylib",
 		src: "",
 	},
+	{
+		name: "Decima",
+		description: "Side-scroll Platformer Game",
+		languages: "C#, Unity",
+		src: "",
+	},
+	{
+		name: "League of Legends Smart Overlay",
+		description: "Org Repo",
+		languages: "Riot API",
+		src: "",
+	},
+	{
+		name: "Valorant Manually-controlled Overlay",
+		description: "Org Repo",
+		languages: "React, Socket.io",
+		src: "",
+	},
+	{
+		name: "Mobile Legends: Bang Bang Manually-controlled Overlay",
+		description: "Org Repo",
+		languages: "React, Socket.io",
+		src: "",
+	},
+	{
+		name: "Call of Duty: Mobile Manually-controlled Overlay   ",
+		description: "Org Repo",
+		languages: "React, Socket.io",
+		src: "",
+	},
+	{
+		name: "iZip",
+		description:
+			"Group Project, forked repo (ethanbrimhall/kahoot-clone-nodejs ), Kahoot clone",
+		languages: "JavaScript, Nodejs",
+		src: "",
+	},
+	{
+		name: "Bookstore System",
+		description: "Practice Project",
+		languages: "MERN Stack",
+		src: "",
+	},
+	{
+		name: "Library Management System",
+		description: "Group Project, unfinished",
+		languages: "Java",
+		src: "",
+	},
+	{
+		name: "ATM Project with Flashdrive",
+		description: "School Project",
+		languages: "C",
+		src: "",
+	},
+	{
+		name: "iRenta",
+		description: "Capstone, Airbnb clone?",
+		languages: "MERN Stack",
+		src: "",
+	},
+	{
+		name: "Takezo's Blog Site",
+		description: "WIP",
+		languages: "???",
+		src: "",
+	},
+	{
+		name: "Breeding Sim",
+		description: "WIP",
+		languages: "Unity, C#, PostgreSQL, Node",
+		src: "",
+	},
 ];
 
 const devSkills = {
