@@ -6,11 +6,6 @@ import "./globals.css";
 export const metadata = {
 	title: "Takezo's Portfolio",
 	description: "Developed by Dave Jornales",
-	openGraph: {
-		images: [
-		"./assets/blue-header-logo.svg"
-		],
-	}
 };
 
 export default function RootLayout({ children }) {
