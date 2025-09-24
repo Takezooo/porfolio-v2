@@ -48,6 +48,7 @@ const Nav = () => {
 						}`}
 					>
 						{link.name}
+						
 					</Link>
 				);
 			})}
