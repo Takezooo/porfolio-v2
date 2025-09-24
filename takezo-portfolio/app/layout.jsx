@@ -12,6 +12,9 @@ export const metadata = {
 		images: [
 			{
 				url: "https://dave-portfolio-three.vercel.app/api/og",
+
+				width: 1200,
+				height: 630,
 				alt: "Test Thumbnail",
 			},
 		],
