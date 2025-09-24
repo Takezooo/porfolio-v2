@@ -20,45 +20,52 @@ const cyberProjects = [
 const devProjects = [
 	{
 		name: "BG FILM",
-		description: "Group Project",
+		description: "BG Film website is a site for our group project in school about multimedia. My role here is Producer and Webmaster, which is why I created this website. No frameworks were used because I hadn’t explored them at that time.",
 		languages: "HTML, CSS, JS",
-		src: "",
+		src: "./assets/",
+		link: "https://bgfilm.vercel.app/",
 	},
 	{
 		name: "PLATZ DODGE",
 		description: "Group Activity",
 		languages: "C, Raylib",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Decima",
 		description: "Side-scroll Platformer Game",
 		languages: "C#, Unity",
 		src: "",
+		link: "",
 	},
 	{
 		name: "League of Legends Smart Overlay",
 		description: "Org Repo",
 		languages: "Riot API",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Valorant Manually-controlled Overlay",
 		description: "Org Repo",
 		languages: "React, Socket.io",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Mobile Legends: Bang Bang Manually-controlled Overlay",
 		description: "Org Repo",
 		languages: "React, Socket.io",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Call of Duty: Mobile Manually-controlled Overlay   ",
 		description: "Org Repo",
 		languages: "React, Socket.io",
 		src: "",
+		link: "",
 	},
 	{
 		name: "iZip",
@@ -66,48 +73,55 @@ const devProjects = [
 			"Group Project, forked repo (ethanbrimhall/kahoot-clone-nodejs ), Kahoot clone",
 		languages: "JavaScript, Nodejs",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Bookstore System",
 		description: "Practice Project",
 		languages: "MERN Stack",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Library Management System",
 		description: "Group Project, unfinished",
 		languages: "Java",
 		src: "",
+		link: "",
 	},
 	{
 		name: "ATM Project with Flashdrive",
 		description: "School Project",
 		languages: "C",
 		src: "",
+		link: "",
 	},
 	{
 		name: "iRenta",
 		description: "Capstone, Airbnb clone?",
 		languages: "MERN Stack",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Takezo's Blog Site",
 		description: "WIP",
 		languages: "???",
 		src: "",
+		link: "",
 	},
 	{
 		name: "Breeding Sim",
 		description: "WIP",
 		languages: "Unity, C#, PostgreSQL, Node",
 		src: "",
+		link: "",
 	},
 ];
 
 const devSkills = {
 	languages: "HTML, CSS, JavaScript, C, C++, C#, Python, Java",
-	databases: "MongoDB, PostgreSQL",
+	databases: "MongoDB, PostgreSQL, MySQL",
 	frameworks: "ReactJs, AngularJs, Next.js, Tailwind, Bootstrap 5",
 	devTools: "Git, Github, Figma, Postman, VS Code",
 };
@@ -129,33 +143,35 @@ const Projects = () => {
 								key={index}
 								className="rounded overflow-hidden shadow-lg flex flex-col"
 							>
-								<div className="relative">
-									<Image
-										className="w-full"
-										src={item.src === "" && `./assets/cyber-bg.svg`}
-										alt="Image placeholder"
-										width={100}
-										height={100}
-									/>
-									<div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-my-bgcolor opacity-25"></div>
-									<div
-										className={`text-xs absolute top-0 right-0 bg-my-bgcolor px-4 py-2 text-white mt-3 mr-3 border-3 ${borderColor}`}
-									>
-										{item.tech}
+								<Link href={item.link === "" ? `/` : item.link}>
+									<div className="relative">
+										<Image
+											className="w-full"
+											src={item.src === "" && `./assets/cyber-bg.svg`}
+											alt="Image placeholder"
+											width={100}
+											height={100}
+										/>
+										<div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-my-bgcolor opacity-25"></div>
+										<div
+											className={`text-xs absolute top-0 right-0 bg-my-bgcolor px-4 py-2 text-white mt-3 mr-3 border-3 ${borderColor}`}
+										>
+											{item.tech}
+										</div>
 									</div>
-								</div>
-								<div className="py-4 mb-auto">
-									<h3
-										className={`text-lg md:text-h3 font-semibold mb-2  ${
-											theme === "green" ? `text-cyber` : `text-dev`
-										}`}
-									>
-										{item.name}
-									</h3>
-									<p className="text-neutral-50 text-xs sm:text-base md:text-p">
-										{item.description}
-									</p>
-								</div>
+									<div className="py-4 mb-auto">
+										<h3
+											className={`text-lg md:text-h3 font-semibold mb-2  ${
+												theme === "green" ? `text-cyber` : `text-dev`
+											}`}
+										>
+											{item.name}
+										</h3>
+										<p className="text-neutral-50 text-xs sm:text-base md:text-p">
+											{item.description}
+										</p>
+									</div>
+								</Link>
 							</div>
 					  ))
 					: devProjects.map((item, index) => (
