@@ -27,7 +27,7 @@ const links = [
 ];
 
 const Nav = () => {
-	const { theme } = useTheme();
+	const { theme, handleNav } = useTheme();
 	const pathname = usePathname();
 	const [fontColor, setFontColor] = useState("text-cyber");
 	useEffect(() => {
@@ -46,6 +46,7 @@ const Nav = () => {
 						} transition-text duration-200 ${
 							theme === "green" ? `hover:text-cyber` : `hover:text-dev`
 						}`}
+						onClick={handleNav}
 					>
 						{link.name}
 						
