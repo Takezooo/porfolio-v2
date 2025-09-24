@@ -9,7 +9,7 @@ import Nav from "./Nav";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
-
+import { Switch } from "./ui/switch";
 // context
 import { useTheme } from "../context/ThemeContext";
 
@@ -54,12 +54,19 @@ const Header = () => {
 					<Nav />
 				</div>
 				<div className="flex justify-self-end items-center gap-4">
-					<Button
-						onClick={toggleTheme}
-						className={`hidden md:flex border-3 cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-100 ${borderColor}`}
+					<Switch
+						checked={theme === "green"}
+						onCheckedChange={toggleTheme}
+						className={`hidden md:flex border-3 cursor-pointer border-2 border-neutral-50
+								data-[state=checked]:bg-cyber
+								data-[state=unchecked]:bg-dev
+        				`}
 					>
-						{theme === "green" ? `CYBER` : `DEV`}
-					</Button>
+						<span className="text-sm font-medium">
+							{theme === "green" ? "CYBER" : "DEV"}
+						</span>
+					</Switch>
+
 					{/* Mobile Nav */}
 					<div
 						onClick={handleNav}
@@ -78,12 +85,18 @@ const Header = () => {
 					menuOpen ? "left-0" : "left-[-100%]"
 				}`}
 			>
-				<Button
-					onClick={toggleTheme}
-					className={`flex md:hidden w-[100%] border-3 cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-100 ${borderColor} mb-8`}
-				>
-					{theme === "green" ? `CYBER` : `DEV`}
-				</Button>
+					<Switch
+						checked={theme === "green"}
+						onCheckedChange={toggleTheme}
+						className={`flex md:hidden border-2 cursor-pointer border-2 border-neutral-50 mb-8
+								data-[state=checked]:bg-cyber
+								data-[state=unchecked]:bg-dev
+        				`}
+					>
+						<span className="text-sm font-medium">
+							{theme === "green" ? "CYBER" : "DEV"}
+						</span>
+					</Switch>
 				<Nav />
 			</div>
 		</header>
