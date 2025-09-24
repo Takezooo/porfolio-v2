@@ -95,7 +95,7 @@ const Header = () => {
 				{/* Close Button */}
 				<Button
 					onClick={handleNav}
-					className="absolute top-5 -right-15 text-h3"
+					className="absolute top-11 -right-15 text-h3"
 					aria-label="Close menu"
 				>
 					<IoClose
