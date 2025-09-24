@@ -15,7 +15,7 @@ const cyberProjects = [
 		name: "WIP",
 		description: "Coming Soon",
 		tech: "???",
-		src: "./assets/cyber-bg.svg",
+		src: "/assets/cyber-bg.svg",
 	},
 ];
 const devProjects = [
