@@ -6,6 +6,18 @@ import "./globals.css";
 export const metadata = {
 	title: "Takezo's Portfolio",
 	description: "Developed by Dave Jornales",
+	openGraph: {
+		url: "https://dave-portfolio-three.vercel.app/",
+		siteName: "Takezo's Portfolio",
+		images: [
+			{
+				url: "https://dave-portfolio-three.vercel.app/api/og",
+				alt: "Test Thumbnail",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
 };
 
 export default function RootLayout({ children }) {
