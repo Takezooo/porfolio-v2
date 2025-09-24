@@ -18,17 +18,12 @@ import { CiMenuFries } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 
 const Header = () => {
-	const { theme, toggleTheme } = useTheme();
+	const { theme, toggleTheme, handleNav, menuOpen } = useTheme();
 	const [borderColor, setBorderColor] = useState("border border-cyber");
-	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		setBorderColor(theme === "green" ? "border-cyber" : "border-dev");
 	}, [theme]);
-
-	const handleNav = () => {
-		setMenuOpen((prevMenu) => !prevMenu);
-	};
 
 	return (
 		<header className="mb-10 h-[100px]">
