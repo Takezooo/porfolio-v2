@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 // next
 import Image from "next/image";
+import Link from "next/link";
 
 // context
 import { useTheme } from "../../context/ThemeContext";
