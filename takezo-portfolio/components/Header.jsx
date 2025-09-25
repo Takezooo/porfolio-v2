@@ -26,7 +26,7 @@ const Header = () => {
 	}, [theme]);
 
 	return (
-		<header className="mb-10 h-[100px]">
+		<header className="mb-2 md:mb-4 h-[100px]">
 			<div className="items-center grid grid-cols-[1fr_auto] lg:grid-cols-[1fr_auto_1fr]">
 				{/* Logo */}
 				<Link href="/" className="col-start-1">
@@ -53,7 +53,7 @@ const Header = () => {
 					<Switch
 						checked={theme === "green"}
 						onCheckedChange={toggleTheme}
-						className={`hidden md:flex border-3 cursor-pointer border-2 border-neutral-50
+						className={`hidden md:flex cursor-pointer
 								data-[state=checked]:bg-cyber
 								data-[state=unchecked]:bg-dev
         				`}
@@ -100,7 +100,7 @@ const Header = () => {
 				<Switch
 					checked={theme === "green"}
 					onCheckedChange={toggleTheme}
-					className={`flex md:hidden border-2 cursor-pointer border-2 border-neutral-50 mb-8
+					className={`flex md:hidden cursor-pointer mb-8
 								data-[state=checked]:bg-cyber
 								data-[state=unchecked]:bg-dev
         				`}
