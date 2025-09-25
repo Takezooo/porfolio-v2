@@ -61,7 +61,7 @@ const Services = () => {
 
 	return (
 		<main className="relative min-h-screen w-full overflow-hidden">
-			<section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-6 sm:px-6 md:py-16 lg:px-10">
+			<section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-0 py-6 sm:px-6 md:py-16 lg:px-10">
 				<header className="flex flex-col gap-6">
 					<div className="grid gap-3">
 						<span className="text-xs sm:text-base md:text-p font-semibold uppercase tracking-[0.35em] text-neutral-200">

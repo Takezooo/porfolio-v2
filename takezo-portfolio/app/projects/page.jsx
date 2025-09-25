@@ -67,7 +67,7 @@ const Projects = () => {
 								key={index}
 								className={`relative rounded overflow-hidden shadow-lg flex flex-col p-4 group`}
 							>
-								<div class="-z-1 absolute inset-0 bg-gradient-to-t from-dev via-my-bgcolor opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+								<div className="-z-1 absolute inset-0 bg-gradient-to-t from-dev via-my-bgcolor opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
 								<Link href={`${item.link}`}>
 									<div className="relative">

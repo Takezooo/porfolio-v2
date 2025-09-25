@@ -26,7 +26,7 @@ const Header = () => {
 	}, [theme]);
 
 	return (
-		<header className="mb-2 md:mb-10 h-[100px]">
+		<header className="mb-2 md:mb-4 h-[100px]">
 			<div className="items-center grid grid-cols-[1fr_auto] lg:grid-cols-[1fr_auto_1fr]">
 				{/* Logo */}
 				<Link href="/" className="col-start-1">
